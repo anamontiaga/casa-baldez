@@ -3,9 +3,113 @@
 @import "layouts/navbar";
 @import "layouts/header";
 
+// body {
+//   background: url("../images/background_teste_foto.jpg") center no-repeat;
+//   background-size: cover;
+//   margin: 0;
+//   height: 100vh;
+// }
+
+* {
+  box-sizing: border-box;
+}
 body {
-  background: url("../images/background_teste_foto.jpg") center no-repeat;
-  background-size: cover;
   margin: 0;
-  height: 100vh;
+  padding: 0;
+}
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+  text-align: center;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.container {
+  text-align: center;
+  & > div:nth-child(2) {
+    color: #777;
+    background-color: white;
+    padding: 50px 80px;
+  }
+}
+.text {
+  position: relative;
+  & > div {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+  }
+}
+.bgimg-1,
+.bgimg-2 {
+  position: relative;
+  opacity: 0.8;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("../images/background_teste_foto.jpg");
+  min-height: 100vh;
+}
+
+.bgimg-2 {
+  background-image: url("https://images.pexels.com/photos/3181432/pexels-photo-3181432.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  min-height: 60vh;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  bottom: 45%;
+  width: 100%;
+  text-align: center;
+  animation: text 15s linear infinite;
+}
+
+.caption span.border {
+  color: #2e2d2d;
+  padding: 18px;
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  transition: transform 300ms linear;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.8) translateY(20px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(0.6) translateY(10px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(0.8) translateY(15px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) translateY(5px);
+    opacity: 1;
+  }
 }
