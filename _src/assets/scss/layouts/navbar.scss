@@ -111,9 +111,6 @@ nav a:nth-child(4):hover ~ .nav-underline2 {
 
 @media all and (min-width: 768px) {
   nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
     width: 700px;
     margin: 3rem auto;
     margin-top: 3.5rem;
@@ -121,10 +118,7 @@ nav a:nth-child(4):hover ~ .nav-underline2 {
   }
 
   nav a {
-    display: block;
     font-size: 18px;
-    width: 20%;
-    padding: 0.55rem 0;
   }
 
   .nav-underline,
@@ -144,12 +138,7 @@ nav a:nth-child(4):hover ~ .nav-underline2 {
 
   nav a:hover {
     font-size: 22px;
-    font-weight: 900;
-    text-align: left;
     transition: font-size 0.1s linear, font-weight 0.1s linear;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    color: #ffffff;
   }
 
   nav a:nth-child(1).current ~ .nav-underline {
