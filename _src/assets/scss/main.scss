@@ -1,0 +1,10 @@
+@import "./core/variables";
+@import "./core/fonts";
+@import "layouts/navbar";
+
+body {
+  background: url("../images/background_teste_foto.jpg") center no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
