@@ -1,20 +1,62 @@
 @import "../core/variables";
 
+.logo-img {
+  height: 100px;
+  margin: 15px;
+}
+
+// MENÚ HAMBURGUESA
+
+#menu_on {
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+#menu_on span {
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  background: #fff;
+  transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
+  transform-origin: 0px 100%;
+}
+
+#menu_on span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+
+#menu_on span:nth-child(3) {
+  bottom: 0;
+}
+
+// MENÚ HAMBURGUESA
+
 nav {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 300px;
-  margin: 3rem auto;
-  margin-top: 2.5rem;
-  padding-right: 15px;
+  width: 340px;
+  margin: 2rem auto;
+  margin-top: 2rem;
+  padding-right: 20px;
 }
-
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
 nav a {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   width: 20%;
-  padding: 0.55rem 0;
+  padding: 0.25rem 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #fff;
   text-decoration: none;
@@ -40,6 +82,7 @@ nav a {
 nav a:hover {
   font-size: 13px;
   font-weight: 900;
+  text-align: left;
   transition: font-size 0.1s linear, font-weight 0.1s linear;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #ffffff;
@@ -50,15 +93,15 @@ nav a:nth-child(1).current ~ .nav-underline {
 }
 
 nav a:nth-child(2).current ~ .nav-underline {
-  left: 25%;
+  left: 26%;
 }
 
 nav a:nth-child(3).current ~ .nav-underline {
-  left: 50%;
+  left: 52.5%;
 }
 
 nav a:nth-child(4).current ~ .nav-underline {
-  left: 75%;
+  left: 78%;
 }
 
 nav a:nth-child(1):hover ~ .nav-underline {
@@ -66,15 +109,15 @@ nav a:nth-child(1):hover ~ .nav-underline {
 }
 
 nav a:nth-child(2):hover ~ .nav-underline {
-  left: 25%;
+  left: 26%;
 }
 
 nav a:nth-child(3):hover ~ .nav-underline {
-  left: 50%;
+  left: 52.5%;
 }
 
 nav a:nth-child(4):hover ~ .nav-underline {
-  left: 75%;
+  left: 78%;
 }
 
 nav a:nth-child(1).current ~ .nav-underline2 {
@@ -82,15 +125,15 @@ nav a:nth-child(1).current ~ .nav-underline2 {
 }
 
 nav a:nth-child(2).current ~ .nav-underline2 {
-  left: 25%;
+  left: 26%;
 }
 
 nav a:nth-child(3).current ~ .nav-underline2 {
-  left: 50%;
+  left: 52.5%;
 }
 
 nav a:nth-child(4).current ~ .nav-underline2 {
-  left: 75%;
+  left: 78%;
 }
 
 nav a:nth-child(1):hover ~ .nav-underline2 {
@@ -98,15 +141,15 @@ nav a:nth-child(1):hover ~ .nav-underline2 {
 }
 
 nav a:nth-child(2):hover ~ .nav-underline2 {
-  left: 25%;
+  left: 26%;
 }
 
 nav a:nth-child(3):hover ~ .nav-underline2 {
-  left: 50%;
+  left: 52.5%;
 }
 
 nav a:nth-child(4):hover ~ .nav-underline2 {
-  left: 75%;
+  left: 78%;
 }
 
 @media all and (min-width: 768px) {
